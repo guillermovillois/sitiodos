@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block head_title %}Muy picky{% endblock head_title %}</title>
+	{% include 'snippets/nav.html' %}
+</head>
+<body>
+{% include 'snippets/css.html' %}
+
+	<div class='container'>
+	{% block content %}{% endblock content %}
+	</div>
+	<div class='container'>
+	<h2>{{ randomnumber }}
+	<p>
+		{% if randomnumber in some_list %}
+			print( {{ some_list}} )
+		{% endif  %}
+
+	</p></h2>
+	</div>
+{% include 'snippets/js.html' %}
+</body>
+</html>
